@@ -1,31 +1,43 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Phone, Linkedin, MessageCircle, Instagram, Copy, Check } from "lucide-react";
+import { Phone, Linkedin, MessageCircle, Instagram, Facebook, Mail, Copy, Check } from "lucide-react";
 
 const contacts = [
   {
     label: "Phone",
-    value: "+880 1XXX-XXXXXX",
+    value: "+880 1861-881531",
     icon: Phone,
-    href: "tel:+8801XXXXXXXXX",
+    href: "tel:+8801861881531",
+  },
+  {
+    label: "Email",
+    value: "shoshan23@gmail.com",
+    icon: Mail,
+    href: "mailto:shoshan23@gmail.com",
   },
   {
     label: "LinkedIn",
     value: "Shohan Ahmed Swazon",
     icon: Linkedin,
-    href: "https://linkedin.com/in/",
+    href: "https://www.linkedin.com/in/shohan-ahmed-swazon-75sah?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     label: "WhatsApp",
-    value: "+880 1XXX-XXXXXX",
+    value: "+880 1861-881531",
     icon: MessageCircle,
-    href: "https://wa.me/8801XXXXXXXXX",
+    href: "https://wa.me/8801861881531",
   },
   {
     label: "Instagram",
-    value: "@shohanahmedswazon",
+    value: "@5w4z0n",
     icon: Instagram,
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/5w4z0n/?utm_source=ig_web_button_share_sheet",
+  },
+  {
+    label: "Facebook",
+    value: "Ahmed Swazon",
+    icon: Facebook,
+    href: "https://www.facebook.com/ahmedSwazon53",
   },
 ];
 

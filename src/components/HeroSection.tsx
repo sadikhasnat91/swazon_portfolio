@@ -30,15 +30,42 @@ const HeroSection = () => {
             Mechanical Engineering Student
           </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="font-display font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6"
-          >
-            Shohan Ahmed{" "}
-            <span className="text-gradient">Swazon</span>
-          </motion.h1>
+          <div className="font-display font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
+              className="inline-block"
+            >
+              <motion.span
+                animate={{ 
+                  textShadow: [
+                    "0 0 20px rgba(0,188,212,0)",
+                    "0 0 20px rgba(0,188,212,0.3)",
+                    "0 0 20px rgba(0,188,212,0)"
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Shohan Ahmed{" "}
+              </motion.span>
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 50, rotate: -10 }}
+              animate={{ opacity: 1, x: 0, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 100 }}
+              className="inline-block text-gradient"
+            >
+              <motion.span
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Swazon
+              </motion.span>
+            </motion.span>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -81,20 +108,43 @@ const HeroSection = () => {
 
         {/* Portrait */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0, scale: 0.85, rotate: -6 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
           className="flex-shrink-0"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" />
-            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/30 glow-cyan">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 group">
+            {/* Animated rotating border */}
+            <motion.div
+              className="absolute -inset-3 rounded-2xl border-2 border-primary/40"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              style={{ borderRadius: "1rem" }}
+            />
+            {/* Glow pulse */}
+            <motion.div
+              className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/15 blur-2xl"
+              animate={{ opacity: [0.4, 0.8, 0.4], scale: [0.95, 1.05, 0.95] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
+            {/* Corner accents */}
+            <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary rounded-tl-lg" />
+            <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary rounded-tr-lg" />
+            <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-accent rounded-bl-lg" />
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent rounded-br-lg" />
+            {/* Image */}
+            <motion.div
+              className="relative w-full h-full rounded-xl overflow-hidden border border-primary/30 glow-cyan"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.4 }}
+            >
               <img
                 src={heroPortrait}
                 alt="Shohan Ahmed Swazon"
                 className="w-full h-full object-cover"
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+            </motion.div>
           </div>
         </motion.div>
       </div>

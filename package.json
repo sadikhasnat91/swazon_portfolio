@@ -1,8 +1,9 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "shohan-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Portfolio website for Shohan Ahmed Swazon - Mechanical Engineering Student",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -48,7 +49,9 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.34.0",
+    "html2canvas": "^1.4.1",
     "input-otp": "^1.4.2",
+    "jspdf": "^4.1.0",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
