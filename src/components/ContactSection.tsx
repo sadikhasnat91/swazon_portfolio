@@ -11,9 +11,9 @@ const contacts = [
   },
   {
     label: "Email",
-    value: "shoshan23@gmail.com",
+    value: "swazonahmed@gmail.com",
     icon: Mail,
-    href: "mailto:shoshan23@gmail.com",
+    href: "mailto:swazonahmed@gmail.com",
   },
   {
     label: "LinkedIn",

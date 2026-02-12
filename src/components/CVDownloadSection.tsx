@@ -61,7 +61,7 @@ const CVDownloadSection = () => {
       pdf.setTextColor(60, 60, 60);
       pdf.text("Phone: +880 1861-881531", margin, yPos);
       yPos += 5;
-      pdf.text("Email: shoshan23@gmail.com", margin, yPos);
+      pdf.text("Email: swazonahmed@gmail.com", margin, yPos);
       yPos += 5;
       pdf.text("WhatsApp: +880 1861-881531", margin, yPos);
       yPos += 5;
